@@ -1,4 +1,18 @@
 
+let jeton = true;
+const joue = document.getElementById('jouer');
+const numberDice = document.getElementById('scoreCurrent1')
+const numberDice2 = document.getElementById('scoreCurrent2');
+const hold = document.getElementById('hold');
+const afficheGlobal1 = document.getElementById('score1');
+const afficheGlobal2 = document.getElementById('score2');
+const afficheDice = document.getElementById('dice');
+const nouvellePartie = document.getElementById('nouvellePartie');
+
+
+
+
+
 const lanceDice =()=> {
     return Math.floor(Math.random() * (7 - 1) + 1);
   
@@ -17,53 +31,44 @@ const lanceDice =()=> {
 
 let score = 0;
 let afficheLance
-let i =0;
-let j = 0;
-let jeton = true;
-const joue = document.getElementById('jouer');
-const numberDice = document.getElementById('scoreCurrent1')
-const numberDice2 = document.getElementById('scoreCurrent2');
-const hold = document.getElementById('hold');
-const afficheGlobal1 = document.getElementById('score1');
-const afficheGlobal2 = document.getElementById('score2');
-const afficheDice = document.getElementById('dice');
-const nouvellePartie = document.getElementById('nouvellePartie');
-let scorePlayer2 = 0;
+
+
+
 const goPlay = () => {
     
- if(jeton == true){
-   let lance = lanceDice();
-   i++;
-   if(lance == 1){
-       lance = 0;
-       afficheLance = 1;
-       player1.currentScore=0;
-       jeton = false;
-   }
-   else {
-       afficheLance = lance;
-   }
-   player1.currentScore = player1.currentScore + lance;
+        if(jeton == true){
+            let lance = lanceDice();
    
-   numberDice.textContent= "current : "+player1.currentScore;
-   afficheDice.textContent= afficheLance;
- }
- else {
-     let lancePlayer2 = lanceDice();
-     j++;
-     if(lancePlayer2 == 1){
-         lancePlayer2 = 0;
-         afficheLance = 1;
-         player2.currentScore =0;
-         jeton = true;
-     }
-     else {
-         afficheLance = lancePlayer2;
-     }
-     player2.currentScore = player2.currentScore + lancePlayer2;
-     numberDice2.textContent = "current : "+player2.currentScore;
-     afficheDice.textContent= afficheLance;
- }
+            if(lance == 1){
+                  lance = 0;
+                  afficheLance = 1;
+                  player1.currentScore=0;
+                  jeton = false;
+            }
+             else {
+                   afficheLance = lance;
+            }
+             player1.currentScore = player1.currentScore + lance;
+   
+            numberDice.textContent= "current : "+player1.currentScore;
+            afficheDice.textContent= afficheLance;
+        }
+        else {
+           let lancePlayer2 = lanceDice();
+   
+           if(lancePlayer2 == 1){
+                lancePlayer2 = 0;
+                afficheLance = 1;
+                player2.currentScore =0;
+                jeton = true;
+            }
+            else {
+                afficheLance = lancePlayer2;
+            }
+            player2.currentScore = player2.currentScore + lancePlayer2;
+            numberDice2.textContent = "current : "+player2.currentScore;
+            afficheDice.textContent= afficheLance;
+        }
 }
 
 const holder=() =>{
@@ -81,6 +86,7 @@ const holder=() =>{
         jeton = true;
     }
 }
+
 
 const reset =()=> {
     player1.globalScore = 0;
