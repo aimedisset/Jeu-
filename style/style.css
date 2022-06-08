@@ -9,13 +9,13 @@ nav {
  
   .afficheScore1 {
       width: 100%;
-      text-align: left;
+      text-align: center;
      /* margin: 0 10px;*/
     }
 
     .afficheScore2 {
         width: 100%;
-        text-align: right;
+        text-align: center;
         /*margin:0 600px;*/
       }
 
