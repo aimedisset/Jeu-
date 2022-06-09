@@ -12,7 +12,9 @@ const play1 = document.getElementById('jeton1');
 const play2 = document.getElementById('jeton2');
 const afficheDe = document.getElementById('de');
 
-
+const circle = ' <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">'+
+'<circle cx="8" cy="8" r="8"/>'+
+'</svg>';
 
 let de1 = '<svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" fill="currentColor" class="bi bi-dice-1" viewBox="0 0 16 16">'+
            '<circle cx="8" cy="8" r="1.5"/>'+'<path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>'+
@@ -80,7 +82,7 @@ const goPlay = () => {
                   player1.currentScore=0;
                   jeton = false;
                   
-                  play2.innerHTML="O";
+                  play2.innerHTML=circle;
                 //  afficheDe.innerHTML = tabDice[1];
                   afficheDice.innerHTML = "";
             }
@@ -102,7 +104,7 @@ const goPlay = () => {
                 afficheLance = 1;
                 player2.currentScore =0;
                 jeton = true;
-                play1.innerHTML="0";
+                play1.innerHTML=circle;
                 play2.innerHTML="";
                 numberDice2.textContent = "current : 0";
              
@@ -127,7 +129,7 @@ const holder=() =>{
         player1.currentScore = 0;
         jeton = false;
         play1.innerHTML="";
-        play2.innerHTML="O";
+        play2.innerHTML=circle;
         afficheDice.innerHTML = tabDice[0];
 
     }
@@ -137,7 +139,7 @@ const holder=() =>{
         afficheGlobal2.textContent = "score : "+player2.globalScore;
         player2.currentScore = 0;
         jeton = true;
-        play1.innerHTML="0";
+        play1.innerHTML=circle;
         play2.innerHTML="";
         afficheDice.innerHTML = tabDice[0];
     }
@@ -156,7 +158,7 @@ const reset =()=> {
     numberDice2.textContent = "current : "+player2.currentScore;
     afficheDice.innerHTML= "";
     numberDice.textContent= "current : "+player1.currentScore;
-    play1.innerHTML="0";
+    play1.innerHTML=circle;
     play2.innerHTML="";
 
 }
