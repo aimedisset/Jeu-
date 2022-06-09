@@ -123,25 +123,45 @@ const goPlay = () => {
 
 const holder=() =>{
     if(jeton == true){
+        
         numberDice.innerHTML="current : 0";
         player1.globalScore = player1.globalScore + player1.currentScore;
-        afficheGlobal1.textContent = "score : "+player1.globalScore;
-        player1.currentScore = 0;
-        jeton = false;
-        play1.innerHTML="";
-        play2.innerHTML=circle;
-        afficheDice.innerHTML = tabDice[0];
 
+        if(player1.globalScore<100){
+            afficheGlobal1.textContent = "score : "+player1.globalScore;
+            player1.currentScore = 0;
+            jeton = false;
+            play1.innerHTML="";
+            play2.innerHTML=circle;
+            afficheDice.innerHTML = tabDice[0];
+        }
+        else {
+            afficheDice.innerHTML = "<span style ='font-size : 24px;'>Player 1 Win</span>";
+            afficheGlobal1.textContent = "score : "+player1.globalScore;
+            hold.removeEventListener('click', holder);
+            joue.removeEventListener('click', goPlay);
+            
+        }
     }
     else {
         numberDice2.innerHTML="current : 0";
         player2.globalScore = player2.globalScore + player2.currentScore;
-        afficheGlobal2.textContent = "score : "+player2.globalScore;
-        player2.currentScore = 0;
-        jeton = true;
-        play1.innerHTML=circle;
-        play2.innerHTML="";
-        afficheDice.innerHTML = tabDice[0];
+
+        if(player2.globalScore<100){
+            afficheGlobal2.textContent = "score : "+player2.globalScore;
+            player2.currentScore = 0;
+            jeton = true;
+            play1.innerHTML=circle;
+            play2.innerHTML="";
+            afficheDice.innerHTML = tabDice[0];
+        }
+        else {
+            afficheDice.innerHTML = "<span style ='font-size : 24px;'>Player 2 Win</span>";
+            afficheGlobal2.textContent = "score : "+player2.globalScore;
+            hold.removeEventListener('click', holder);
+            joue.removeEventListener('click', goPlay);
+            
+        }
     }
 }
 
@@ -160,6 +180,8 @@ const reset =()=> {
     numberDice.textContent= "current : "+player1.currentScore;
     play1.innerHTML=circle;
     play2.innerHTML="";
+    hold.addEventListener('click', holder);
+    joue.addEventListener('click', goPlay)
 
 }
 
