@@ -44,14 +44,8 @@ nav {
 
   .jouer2 {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 30px;
+    font-size : 30px;
     
-    margin-top : 30%;
-    position : absolute;
   }
 
   .jouer1:hover {
