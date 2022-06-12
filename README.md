@@ -2,7 +2,7 @@
 Jeu en javascript de hasard avec des dés.
 
 
-Règles  : le premier joueur arriver avec un score global de 100 gagne,
+Règles  : le premier joueur qui atteint un score global de 100 gagne,
 
 Lors des lancers le dé 1 est perdant, on perd son current score et la main.
 
