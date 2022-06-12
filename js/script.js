@@ -1,4 +1,12 @@
 
+
+/********************************************************************************************/
+/*  
+/* DISSET Aimé 
+/* Evaluation d'entraînement Dynamiser vos sites Web avec Javascript
+/* 12/06/2022
+/******************************************************************************************* */
+
 let jeton = true; //variable booleenne qui permet de donner la main à un joueur player1 -> true et player2 -> false par défaut
 
 
