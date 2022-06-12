@@ -1,5 +1,5 @@
 
-let jeton = true; //variable booleenne qui permet de donner la main à un joueur player1 -> true et player2 -> false
+let jeton = true; //variable booleenne qui permet de donner la main à un joueur player1 -> true et player2 -> false par défaut
 
 
 /************************ Affectation des identifiants du DOM ***************************/
