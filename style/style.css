@@ -1,61 +1,123 @@
-nav {
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+
+ body {
+  font-family: 'Lato', cursive;
+  
+
+  
+ }
+
+
+
+ /* classe d'affichage joueur 1 et 2*/
+  .afficheJoueur {
+      width: 100%;
+      text-align: center;
+    
+    }
+
+  
+
+
+/* classe du ROLL DICE */
+  .roll {
     width: 100%;
-    height: 50px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lato', cursive;
+     margin-top : 10%;
+  }
+
+
+   /* Class permettant de centrer une div dans une div pour les current score*/
+  .current {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    background-color: red;
+    padding-top : 2%;
+    vertical-align: middle;
+}
+
+/* classe du HOLD */
+  .holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lato', cursive;
+    margin-top : 10%;
+  }
+
+
+/* Row du milieu afin de définir une marge de bas */
+.rowMiddle {
+  margin-bottom : 100px;
+
+}
+
+
+  .newgame {
+    width: 100%;
+    font-size : 30px;
+    font-family: 'Lato', cursive;
+    
+  }
+
+  .deIcon {
+    color : red;
+    padding-top : 6%;
+  }
+  .globalScore {
+    font-family: 'Lato', cursive;
+    font-size : 90px;
+    color : red;
+  }
+
+  .win {
+    animation : animationWinner ease 3.5s;
+    font-size : 40px;
+    font-weight: 900;
+    font-family: 'Lato', cursive;
+    color : red;
+
+
   }
 
  
-  .afficheScore1 {
-      width: 100%;
-      text-align: center;
-     /* margin: 0 10px;*/
-    }
 
-    .afficheScore2 {
-        width: 100%;
-        text-align: center;
-        /*margin:0 600px;*/
-      }
-
-  .jouer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 30px;
-    
-    margin-top : 10%;
-    position : absolute;
-  }
-  .jouer1 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 30px;
-    
-    margin-top : 20%;
-    position : absolute;
-  }
-
-  .jouer2 {
-    width: 100%;
-    font-size : 30px;
-    
-  }
-
-  .jouer1:hover {
+  .roll:hover {
     cursor: pointer;
   }
 
-  .jouer:hover {
+  .holder:hover {
     cursor: pointer;
   }
 
-  .jouer2:hover {
+  .newgame:hover {
     cursor: pointer;
   }
+
+  @keyframes animationWinner {
+    0%{
+      opacity : 0;
+      transform : translateX(350px);
+  }
+  100%{
+      opacity : 1;
+      transform : translateX(0px);
+  }
+}
+
