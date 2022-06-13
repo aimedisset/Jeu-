@@ -25,15 +25,15 @@ const afficheDe = document.getElementById('de');
 const gagnant = document.getElementById('winner');
 
 // affect à circle l'icone point rouge de bootstrap pour visualiser quel joueur a la main
-const circle = ' <span style="color : red; font-weight: 900; vertical-align:middle;"> <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">'+
+const circle = ' <span class="puce"> <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">'+
 '<circle cx="8" cy="8" r="8"/>'+
 '</svg>';
 //affect aux variables d'affichage dans le DOM selon si le joueur a la main ou pas.
-const player1AfficheFalse = "<span style=\"font-size:60px; font-weight : 100; color:black; font-family:'Lato',cursive;vertical-align: middle;\">PLAYER 1</span>";
-const player1AfficheTrue = "<span style=\"font-size:60px; font-weight : 900; color:black; font-family:'Lato',cursive;vertical-align: middle;\">PLAYER 1&nbsp;&nbsp;</span>";
+const player1AfficheFalse = "<span class=\"afficheJoueurFalse\">PLAYER 1</span>";
+const player1AfficheTrue = "<span class=\"afficheJoueurTrue\">PLAYER 1&nbsp;&nbsp;</span>";
 
-const player2AfficheFalse = "<span style=\"font-size:60px; font-weight : 100; color:black; font-family:'Lato',cursive;vertical-align: middle;\">PLAYER 2</span>";
-const player2AfficheTrue = "<span style=\"font-size:60px; font-weight : 900; color:black; font-family:'Lato',cursive;vertical-align: middle;\">PLAYER 2&nbsp;&nbsp;</span>";
+const player2AfficheFalse = "<span class=\"afficheJoueurFalse\">PLAYER 2</span>";
+const player2AfficheTrue = "<span class=\"afficheJoueurTrue\">PLAYER 2&nbsp;&nbsp;</span>";
 
 
 

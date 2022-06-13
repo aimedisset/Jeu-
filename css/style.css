@@ -17,13 +17,37 @@
 
 
 
+
+
  /* classe d'affichage joueur 1 et 2*/
   .afficheJoueur {
       width: 100%;
       text-align: center;
     
     }
+ /* affichage du joueur quand ce dernier n'a pas la main*/
+  .afficheJoueurFalse {
+    font-size:60px; 
+    font-weight : 100; 
+    color:black; 
+    font-family:'Lato',cursive;
+    vertical-align: middle;
+  }
 
+/*affichage du joueur quand il a la main */
+  .afficheJoueurTrue {
+          font-size:60px; 
+          font-weight : 900; 
+          color:black; 
+          font-family:'Lato',cursive;
+          vertical-align: middle;
+  }
+  /* propriétés de la puce quand le joueur a la main */
+  .puce {
+    color : red; 
+    font-weight: 900; 
+    vertical-align:middle;
+  }
   
 
 
@@ -53,6 +77,14 @@
     background-color: red;
     padding-top : 2%;
     vertical-align: middle;
+}
+
+.currentText {
+  color : white; 
+  text-align : center; 
+  font-family: 'Lato',cursive; 
+  font-size: 25px;
+  font-weight :bolder;
 }
 
 /* classe du HOLD */
@@ -126,4 +158,24 @@
       transform : translateX(0px);
   }
 }
+/* break point pour les téléphones portables et petit écran afin d'améliorer l'utilisation */
+@media(max-width : 992px){
+     .currentText {
+      font-size: 50px;
+     }
+     .afficheJoueurFalse {
+      font-size: 50px;
+     }
+     .afficheJoueurTrue {
+      font-size : 50px;
+     }
+        /* Class permettant de centrer une div dans une div pour les current score*/
+  .current {
 
+    width: 200px;
+    height: 150px;
+
+}
+
+
+}
